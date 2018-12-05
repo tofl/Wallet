@@ -1,3 +1,5 @@
-<p>
-  mnemonic works!
-</p>
+<article>
+  <span *ngFor="let word of mnemonic">{{ word }}</span>
+</article>
+
+<button mat-raised-button (click)="generateWords()">Generate</button>
