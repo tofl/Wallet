@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MnemonicComponent implements OnInit {
 
-  public mnemonic = [];
+  public mnemonic = ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'];
 
   constructor() { }
 
@@ -15,10 +15,7 @@ export class MnemonicComponent implements OnInit {
   }
 
   generateWords() {
-    this.mnemonic = [];
-    for (let i = 0; i < 12; i++) {
-      this.mnemonic.push(((Math.random()+3*Number.MIN_VALUE)/Math.PI).toString(36).slice(-5));
-    }
+    this.mnemonic = this.mnemonic.map(() => ((Math.random()+3*Number.MIN_VALUE)/Math.PI).toString(36).slice(-5));
   }
 
 }
