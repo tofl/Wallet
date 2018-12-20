@@ -137,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "Wallet"
+  "defaultProject": "Wallet",
+  "cli": {
+    "defaultCollection": "akita-schematics"
+  }
 }

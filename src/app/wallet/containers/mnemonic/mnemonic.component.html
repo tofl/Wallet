@@ -1,5 +1,5 @@
 <article>
-  <span *ngFor="let word of mnemonic">{{ word }}</span>
+  <span *ngFor="let word of (mnemonic$ | async)">{{ word }}</span>
 </article>
 
 <button mat-raised-button (click)="generateWords()">Generate</button>
